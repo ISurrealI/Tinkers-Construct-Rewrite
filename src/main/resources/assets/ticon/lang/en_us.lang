@@ -1,0 +1,46 @@
+# Creative Tab
+itemGroup.ticon=Tinkers' Construct
+
+# Items
+
+# Blocks
+tile.ticon.seared_stone.0.name=Seared Stone
+tile.ticon.seared_stone.1.name=Seared Cobblestone
+tile.ticon.seared_stone.2.name=Seared Paver
+tile.ticon.seared_stone.3.name=Seared Bricks
+tile.ticon.seared_stone.4.name=Cracked Seared Bricks
+tile.ticon.seared_stone.5.name=Fancy Seared Bricks
+tile.ticon.seared_stone.6.name=Square Seared Bricks
+tile.ticon.seared_stone.7.name=Seared Road
+tile.ticon.seared_stone.8.name=Seared Creeperface
+tile.ticon.seared_stone.9.name=Triangle Seared Bricks
+tile.ticon.seared_stone.10.name=Small Seared Bricks
+tile.ticon.seared_stone.11.name=Seared Tiles
+slab.ticon.seared.0.name=Seared Stone Slab
+slab.ticon.seared.1.name=Seared Cobblestone Slab
+slab.ticon.seared.2.name=Seared Paver Slab
+slab.ticon.seared.3.name=Seared Bricks Slab
+slab.ticon.seared.4.name=Cracked Seared Bricks Slab
+slab.ticon.seared.5.name=Fancy Seared Bricks Slab
+slab.ticon.seared.6.name=Square Seared Bricks Slab
+slab.ticon.seared.7.name=Seared Road Slab
+slab.ticon.seared.8.name=Seared Creeperface Slab
+slab.ticon.seared.9.name=Triangle Seared Bricks Slab
+slab.ticon.seared.10.name=Small Seared Bricks Slab
+slab.ticon.seared.11.name=Seared Tiles Slab
+tile.ticon.seared_stairs_stone.name=Seared Stone Stairs
+tile.ticon.seared_stairs_cobblestone.name=Seared Cobblestone Stairs
+tile.ticon.seared_stairs_baller.name=Seared Paver Stairs
+tile.ticon.seared_stairs_bricks.name=Seared Bricks Stairs
+tile.ticon.seared_stairs_bricks_cracked.name=Cracked Seared Bricks Stairs
+tile.ticon.seared_stairs_bricks_fancy.name=Fancy Seared Bricks Stairs
+tile.ticon.seared_stairs_bricks_square.name=Square Seared Bricks Stairs
+tile.ticon.seared_stairs_road.name=Seared Road Stairs
+tile.ticon.seared_stairs_creeperface.name=Seared Creeperface Stairs
+tile.ticon.seared_stairs_bricks_triangle.name=Triangle Seared Bricks Stairs
+tile.ticon.seared_stairs_bricks_small.name=Small Seared Bricks Stairs
+tile.ticon.seared_stairs_tiles.name=Seared Tiles Stairs
+tile.ticon.smeltery_glass.0.name=Seared Tank
+tile.ticon.smeltery_glass.1.name=Seared Gauge
+tile.ticon.smeltery_glass.2.name=Seared Window
+tile.ticon.smeltery_glass.3.name=Seared Glass

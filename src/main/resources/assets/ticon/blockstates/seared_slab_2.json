@@ -1,0 +1,46 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "transform": "forge:default-block"
+  },
+  "variants": {
+    "type": {
+      "bricks_triangle": {
+        "textures": {
+          "side": "ticon:blocks/smeltery/seared_brick_triangle",
+          "top": "ticon:blocks/smeltery/seared_brick_triangle",
+          "bottom": "ticon:blocks/smeltery/seared_brick_triangle"
+        }
+      },
+      "bricks_small": {
+        "textures": {
+          "side": "ticon:blocks/smeltery/seared_brick_small",
+          "top": "ticon:blocks/smeltery/seared_brick_small",
+          "bottom": "ticon:blocks/smeltery/seared_brick_small"
+        }
+      },
+      "tiles": {
+        "textures": {
+          "side": "ticon:blocks/smeltery/seared_tile",
+          "top": "ticon:blocks/smeltery/seared_tile",
+          "bottom": "ticon:blocks/smeltery/seared_tile"
+        }
+      },
+      "creeperface": {
+        "textures": {
+          "side": "ticon:blocks/smeltery/seared_creeper",
+          "top": "ticon:blocks/smeltery/seared_paver",
+          "bottom": "ticon:blocks/smeltery/seared_paver"
+        }
+      }
+    },
+    "half": {
+      "top": {
+        "model": "upper_slab"
+      },
+      "bottom": {
+        "model": "half_slab"
+      }
+    }
+  }
+}

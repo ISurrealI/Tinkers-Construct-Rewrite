@@ -1,16 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
+  "modid": "ticon",
+  "name": "Tinkers' Construct",
   "description": "Example placeholder mod.",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
-  "updateUrl": "",
-  "authorList": ["CleanroomMC"],
-  "credits": "Authors of this project",
-  "logoFile": "",
-  "screenshots": [],
-  "dependencies": []
+  "updateUrl": "https://github.com/ISurrealI/Tinkers-Construct-Rewrite",
+  "authorList": ["Surreal"],
+  "credits": "Original by Slime Knights, mDiyo, fuj1n, ProgWML6, Sunstrike and Pillbox",
+  "logoFile": "logo.png"
 }
 ]

@@ -1,0 +1,32 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "transform": "forge:default-block",
+    "model": "cube_column"
+  },
+  "variants": {
+    "type": {
+      "tank": {
+        "model": "ticon:smeltery_tank"
+      },
+      "gauge": {
+        "textures": {
+          "end": "ticon:blocks/smeltery/seared_window_top",
+          "side": "ticon:blocks/smeltery/seared_gauge_side"
+        }
+      },
+      "window": {
+        "textures": {
+          "end": "ticon:blocks/smeltery/seared_window_top",
+          "side": "ticon:blocks/smeltery/seared_window_side"
+        }
+      },
+      "glass": {
+        "model": "cube_all",
+        "textures": {
+          "all": "ticon:blocks/smeltery/seared_glass_top"
+        }
+      }
+    }
+  }
+}

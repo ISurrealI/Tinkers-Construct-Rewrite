@@ -1,0 +1,35 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "transform": "forge:default-block",
+    "model": "cube_all"
+  },
+  "variants": {
+    "type": {
+      "stone": {
+        "textures": { "all": "ticon:blocks/smeltery/seared_stone" }
+      },
+      "cobblestone": {
+        "textures": { "all": "ticon:blocks/smeltery/seared_cobble" }
+      },
+      "baller": {
+        "textures": { "all": "ticon:blocks/smeltery/seared_paver" }
+      },
+      "bricks": {
+        "textures": { "all": "ticon:blocks/smeltery/seared_brick" }
+      },
+      "bricks_cracked": {
+        "textures": { "all": "ticon:blocks/smeltery/seared_brick_cracked" }
+      },
+      "bricks_fancy": {
+        "textures": { "all": "ticon:blocks/smeltery/seared_brick_fancy" }
+      },
+      "bricks_square": {
+        "textures": { "all": "ticon:blocks/smeltery/seared_brick_square" }
+      },
+      "road": {
+        "textures": { "all": "ticon:blocks/smeltery/seared_road" }
+      }
+    }
+  }
+}

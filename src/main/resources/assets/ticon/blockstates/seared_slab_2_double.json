@@ -1,0 +1,27 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "transform": "forge:default-block",
+    "model": "cube_all"
+  },
+  "variants": {
+    "type": {
+      "bricks_triangle": {
+        "textures": { "all": "ticon:blocks/smeltery/seared_brick_triangle" }
+      },
+      "bricks_small": {
+        "textures": { "all": "ticon:blocks/smeltery/seared_brick_small" }
+      },
+      "tiles": {
+        "textures": { "all": "ticon:blocks/smeltery/seared_tile" }
+      },
+      "creeperface": {
+        "model": "cube_column",
+        "textures": {
+          "side": "ticon:blocks/smeltery/seared_creeper",
+          "end": "ticon:blocks/smeltery/seared_paver"
+        }
+      }
+    }
+  }
+}

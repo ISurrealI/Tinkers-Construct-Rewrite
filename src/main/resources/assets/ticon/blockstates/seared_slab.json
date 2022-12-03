@@ -1,0 +1,74 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "transform": "forge:default-block"
+  },
+  "variants": {
+    "type": {
+      "stone": {
+        "textures": {
+          "side": "ticon:blocks/smeltery/seared_stone",
+          "top": "ticon:blocks/smeltery/seared_stone",
+          "bottom": "ticon:blocks/smeltery/seared_stone"
+        }
+      },
+      "cobblestone": {
+        "textures": {
+          "side": "ticon:blocks/smeltery/seared_cobble",
+          "top": "ticon:blocks/smeltery/seared_cobble",
+          "bottom": "ticon:blocks/smeltery/seared_cobble"
+        }
+      },
+      "baller": {
+        "textures": {
+          "side": "ticon:blocks/smeltery/seared_paver",
+          "top": "ticon:blocks/smeltery/seared_paver",
+          "bottom": "ticon:blocks/smeltery/seared_paver"
+        }
+      },
+      "bricks": {
+        "textures": {
+          "side": "ticon:blocks/smeltery/seared_brick",
+          "top": "ticon:blocks/smeltery/seared_brick",
+          "bottom": "ticon:blocks/smeltery/seared_brick"
+        }
+      },
+      "bricks_cracked": {
+        "textures": {
+          "side": "ticon:blocks/smeltery/seared_brick_cracked",
+          "top": "ticon:blocks/smeltery/seared_brick_cracked",
+          "bottom": "ticon:blocks/smeltery/seared_brick_cracked"
+        }
+      },
+      "bricks_fancy": {
+        "textures": {
+          "side": "ticon:blocks/smeltery/seared_brick_fancy",
+          "top": "ticon:blocks/smeltery/seared_brick_fancy",
+          "bottom": "ticon:blocks/smeltery/seared_brick_fancy"
+        }
+      },
+      "bricks_square": {
+        "textures": {
+          "side": "ticon:blocks/smeltery/seared_brick_square",
+          "top": "ticon:blocks/smeltery/seared_brick_square",
+          "bottom": "ticon:blocks/smeltery/seared_brick_square"
+        }
+      },
+      "road": {
+        "textures": {
+          "side": "ticon:blocks/smeltery/seared_road",
+          "top": "ticon:blocks/smeltery/seared_road",
+          "bottom": "ticon:blocks/smeltery/seared_road"
+        }
+      }
+    },
+    "half": {
+      "top": {
+        "model": "upper_slab"
+      },
+      "bottom": {
+        "model": "half_slab"
+      }
+    }
+  }
+}

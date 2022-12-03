@@ -1,0 +1,31 @@
+{
+  "parent": "block/block",
+  "textures": {
+    "particle": "ticon:blocks/smeltery/seared_tank_side",
+    "all": "ticon:blocks/smeltery/seared_tank_top",
+    "side": "ticon:blocks/smeltery/seared_tank_side"
+  },
+  "elements": [
+    { "from": [ 0, 0, 0 ],
+      "to": [ 16, 16, 16 ],
+      "faces": {
+        "down":  { "texture": "#all" },
+        "up":    { "texture": "#all" },
+        "north": { "texture": "#side" },
+        "south": { "texture": "#side" },
+        "west":  { "texture": "#side" },
+        "east":  { "texture": "#side" }
+      }
+    },
+    { "from": [ 3, 16, 3 ],
+      "to": [ 13, 17, 13 ],
+      "faces": {
+        "up":  { "texture": "#all" },
+        "north": { "texture": "#side" },
+        "south": { "texture": "#side" },
+        "west":  { "texture": "#side" },
+        "east":  { "texture": "#side" }
+      }
+    }
+  ]
+}
