@@ -38,8 +38,8 @@ public class RenderingHelper {
                 if (facing == EnumFacing.WEST) z += w;
                 addVertex(builder, x, y, z, sprite.getMaxU(), sprite.getMaxV(), color, sl, bl);
                 addVertex(builder, x+w, y, z, sprite.getMinU(), sprite.getMaxV(), color, sl, bl);
-                addVertex(builder, x+w, y+h, z, sprite.getMinU(), sprite.getMinV(), color, sl, bl);
-                addVertex(builder, x, y+h, z, sprite.getMaxU(), sprite.getMinV(), color, sl, bl);
+                addVertex(builder, x+w, y+h, z, sprite.getMinU(), sprite.getInterpolatedV(16 - (16*h)), color, sl, bl);
+                addVertex(builder, x, y+h, z, sprite.getMaxU(), sprite.getInterpolatedV(16 - (16*h)), color, sl, bl);
                 break;
             case Y:
                 if (facing == EnumFacing.UP) y += h;
@@ -50,8 +50,8 @@ public class RenderingHelper {
                 break;
             case Z:
                 if (facing == EnumFacing.SOUTH) x += w;
-                addVertex(builder, x, y, z, sprite.getMinU(), sprite.getMaxV(), color, sl, bl);
-                addVertex(builder, x, y, z+w, sprite.getMaxU(), sprite.getMaxV(), color, sl, bl);
+                addVertex(builder, x, y, z, sprite.getMinU(), sprite.getInterpolatedV(16 - (16*h)), color, sl, bl);
+                addVertex(builder, x, y, z+w, sprite.getMaxU(), sprite.getInterpolatedV(16 - (16*h)), color, sl, bl);
                 addVertex(builder, x, y+h, z+w, sprite.getMaxU(), sprite.getMinV(), color, sl, bl);
                 addVertex(builder, x, y+h, z, sprite.getMinU(), sprite.getMinV(), color, sl, bl);
                 break;

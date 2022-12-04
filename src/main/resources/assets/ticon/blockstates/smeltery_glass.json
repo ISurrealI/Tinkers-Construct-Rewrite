@@ -24,7 +24,7 @@
       "glass": {
         "model": "cube_all",
         "textures": {
-          "all": "ticon:blocks/smeltery/seared_glass_top"
+          "all": "ticon:blocks/smeltery/seared_glass_side"
         }
       }
     }
