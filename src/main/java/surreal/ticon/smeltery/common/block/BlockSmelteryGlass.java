@@ -23,6 +23,7 @@ import net.minecraftforge.fluids.FluidUtil;
 import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import surreal.ticon.TinkersConstruct;
 import surreal.ticon.api.block.IHasSubtype;
 import surreal.ticon.config.FillerConfig;
 import surreal.ticon.smeltery.common.tile.TileTank;
@@ -73,7 +74,7 @@ public class BlockSmelteryGlass extends BlockBreakable implements IHasSubtype {
         TileEntity tile = world.getTileEntity(pos);
         if (tile != null) {
             FluidTank tank = ((TileTank) tile).getTank();
-            if (tank.getFluidAmount() > 0) {
+            if (tank.getFluid() != null) {
                 FluidStack fs = tank.getFluid();
                 return fs.getFluid().getLuminosity(fs);
             }
@@ -115,22 +116,24 @@ public class BlockSmelteryGlass extends BlockBreakable implements IHasSubtype {
             FluidTank tank = ((TileTank) tile).getTank();
             tank.readFromNBT(stack.getTagCompound());
         }
+        worldIn.scheduleBlockUpdate(pos, this, 1, 100);
     }
 
     @Override
     public void getDrops(@Nonnull NonNullList<ItemStack> drops, @Nonnull IBlockAccess world, @Nonnull BlockPos pos, @Nonnull IBlockState state, int fortune) {
         TileEntity tile = FillerConfig.tankRetain ? world.getTileEntity(pos) : null;
+        ItemStack stack = new ItemStack(this, 1, damageDropped(state));
 
         if (tile != null) {
             FluidTank tank = ((TileTank) tile).getTank();
             if (tank.getFluidAmount() > 0) {
                 NBTTagCompound compound = new NBTTagCompound();
                 tank.writeToNBT(compound);
-                ItemStack stack = new ItemStack(this, 1, damageDropped(state));
                 stack.setTagCompound(compound);
-                drops.add(stack);
             }
-        } else super.getDrops(drops, world, pos, state, fortune);
+        }
+
+        drops.add(stack);
     }
 
     @Override

@@ -9,20 +9,26 @@ import net.minecraft.util.ResourceLocation;
 
 public class RenderingHelper {
     static final Minecraft MC = Minecraft.getMinecraft();
-    static final int SKYLIGHT = 240, BLOCKLIGHT = 0;
+    public static final int SKYLIGHT = 240, BLOCKLIGHT = 0;
     public static final int WHITE = 0xFFFFFF;
 
     public static TextureAtlasSprite getSprite(ResourceLocation location) {
         return MC.getTextureMapBlocks().getAtlasSprite(location.toString());
     }
 
-    public static void renderCuboid(TextureAtlasSprite sprite, BufferBuilder builder, double x, double y, double z, float w, float h, int color) {
-        renderPlanes(sprite, builder, x, y, z, w, h, color, EnumFacing.values());
+    public static void renderCuboid(TextureAtlasSprite sprite, BufferBuilder builder, double x, double y, double z, float w, float h, int color, int sl, int bl) {
+        renderPlanes(sprite, builder, x, y, z, w, h, color, sl, bl, EnumFacing.values());
     }
 
     public static void renderPlanes(TextureAtlasSprite sprite, BufferBuilder builder, double x, double y, double z, float w, float h, int color, EnumFacing... facings) {
         for (EnumFacing f : facings) {
             renderPlane(sprite, builder, x, y, z, w, h, color, f);
+        }
+    }
+
+    public static void renderPlanes(TextureAtlasSprite sprite, BufferBuilder builder, double x, double y, double z, float w, float h, int color, int sl, int bl, EnumFacing... facings) {
+        for (EnumFacing f : facings) {
+            renderPlane(sprite, builder, x, y, z, w, h, color, sl, bl, f);
         }
     }
 
@@ -50,10 +56,10 @@ public class RenderingHelper {
                 break;
             case Z:
                 if (facing == EnumFacing.SOUTH) x += w;
-                addVertex(builder, x, y, z, sprite.getMinU(), sprite.getInterpolatedV(16 - (16*h)), color, sl, bl);
-                addVertex(builder, x, y, z+w, sprite.getMaxU(), sprite.getInterpolatedV(16 - (16*h)), color, sl, bl);
-                addVertex(builder, x, y+h, z+w, sprite.getMaxU(), sprite.getMinV(), color, sl, bl);
-                addVertex(builder, x, y+h, z, sprite.getMinU(), sprite.getMinV(), color, sl, bl);
+                addVertex(builder, x, y, z, sprite.getMinU(), sprite.getMaxV(), color, sl, bl);
+                addVertex(builder, x, y, z+w, sprite.getMaxU(), sprite.getMaxV(), color, sl, bl);
+                addVertex(builder, x, y+h, z+w, sprite.getMaxU(), sprite.getInterpolatedV(16 - (16*h)), color, sl, bl);
+                addVertex(builder, x, y+h, z, sprite.getMinU(), sprite.getInterpolatedV(16 - (16*h)), color, sl, bl);
                 break;
         }
     }
@@ -63,15 +69,21 @@ public class RenderingHelper {
     }
 
     public static int red(int c) {
-        return (c >> 16) & 0xFF;
+        int max = 0xFF;
+        if (c >= 0) return (c >> 16) & max;
+        return max;
     }
 
     public static int green(int c) {
-        return (c >> 8) & 0xFF;
+        int max = 0xFF;
+        if (c >= 0) return (c >> 8) & max;
+        return max;
     }
 
     public static int blue(int c) {
-        return c & 0xFF;
+        int max = 0xFF;
+        if (c >= 0) return c & max;
+        return max;
     }
 
     public static int alpha(int c) {
